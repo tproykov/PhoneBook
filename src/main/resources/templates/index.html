@@ -40,7 +40,9 @@
             <td th:text="${contact.name}"></td>
             <td th:text="${contact.number}"></td>
             <td>
-                <form th:method="get">
+                <form th:method="get"
+                    th:action="@{'/edit{name}'(name = ${contact.getName})}"
+                >
                     <button type="submit" class="btn btn-primary">Edit</button>
                 </form>
 
