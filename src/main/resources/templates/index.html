@@ -39,6 +39,17 @@
         <tr th:each="contact : ${contactList}">
             <td th:text="${contact.name}"></td>
             <td th:text="${contact.number}"></td>
+            <td>
+                <form th:method="get">
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                </form>
+
+            </td>
+            <td>
+                <form th:method="delete">
+                    <button type="submit" class="btn btn-primary">Delete</button>
+                </form>
+            </td>
         </tr>
         </tbody>
     </table>

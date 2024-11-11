@@ -27,36 +27,11 @@
 
 
 <div class="container">
-    <legend>All Contacts</legend>
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Number</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="contact : ${contactList}">
-            <td th:text="${contact.name}"></td>
-            <td th:text="${contact.number}"></td>
-            <td>
-                <form th:method="get">
-                    <button type="submit" class="btn btn-primary">Edit</button>
-                </form>
 
-            </td>
-            <td>
-                <form th:method="delete">
-                    <button type="submit" class="btn btn-primary">Delete</button>
-                </form>
-            </td>
-        </tr>
-        </tbody>
-    </table>
 
     <form class="form-horizontal" th:method="post">
         <fieldset>
-            <legend>New Contact</legend>
+            <legend>Edit Contact</legend>
             <div class="form-group">
                 <label for="name" class="col-lg-2 control-label">Name</label>
                 <div class="col-lg-10">
